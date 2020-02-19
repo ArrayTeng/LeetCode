@@ -6,7 +6,7 @@ package com.leetcode.solvingproblems.medium;
  *         <p>
  *         如何定义虚拟头结点？
  */
-public class MyLinkedList {
+public class LeetCode$$707 {
 
     private int size;
 
@@ -15,7 +15,7 @@ public class MyLinkedList {
      */
     private Node dummyHeader;
 
-    public MyLinkedList() {
+    public LeetCode$$707() {
         size = 0;
         dummyHeader = new Node(-1, null);
     }

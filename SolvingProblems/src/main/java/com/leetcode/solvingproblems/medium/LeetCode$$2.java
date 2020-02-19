@@ -6,7 +6,7 @@ package com.leetcode.solvingproblems.medium;
  *         <p>
  *         链表反转
  */
-public class SolutionReverseList {
+public class LeetCode$$2 {
 
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;

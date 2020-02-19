@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author by tengfei on 2020/2/18.
  * @description： leetcode 20
  */
-public class EffectiveBrackets {
+public class LeetCode$$20 {
 
 
     public boolean isValid(String s) {
@@ -28,7 +28,7 @@ public class EffectiveBrackets {
 
 
     public static void main(String[] args) {
-        EffectiveBrackets effectiveBrackets = new EffectiveBrackets();
+        LeetCode$$20 effectiveBrackets = new LeetCode$$20();
         boolean isValid = effectiveBrackets.isValid("{[(]}");
         System.out.println(isValid);
     }
