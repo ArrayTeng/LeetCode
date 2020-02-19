@@ -1,4 +1,4 @@
-package com.leetcode.solvingproblems;
+package com.leetcode.solvingproblems.medium;
 
 /**
  * @author tengfei
