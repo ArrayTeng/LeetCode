@@ -1,5 +1,7 @@
 package com.leetcode.solvingproblems.medium;
 
+import com.leetcode.solvingproblems.ListNode;
+
 /**
  * @author tengfei
  *         LeetCode 2
@@ -21,14 +23,6 @@ public class LeetCode$$2 {
     }
 
 
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
 
 }

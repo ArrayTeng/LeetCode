@@ -1,5 +1,7 @@
 package com.leetcode.solvingproblems.offer;
 
+import com.leetcode.solvingproblems.ListNode;
+
 import java.text.SimpleDateFormat;
 import java.util.Stack;
 
@@ -11,14 +13,6 @@ import java.util.Stack;
  */
 public class Offer$$6 {
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static int[] reversePrint(ListNode head) {
         ListNode prevNode = head;
@@ -41,10 +35,6 @@ public class Offer$$6 {
     }
 
     public static void main(String[] args) {
-        ListNode node = new ListNode(1);
-        node.next = new ListNode(2);
-        node.next.next = new ListNode(3);
-        int[] items = reversePrint(node);
-        System.out.println(items);
+
     }
 }
