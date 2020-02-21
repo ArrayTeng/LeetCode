@@ -17,6 +17,8 @@ import com.leetcode.solvingproblems.ListNode;
  * <p>
  * 限制：
  * 0 <= 节点个数 <= 5000
+ *
+ * 参考资料 https://www.cnblogs.com/keeya/p/9218352.html#%E9%81%8D%E5%8E%86%E6%B3%95
  */
 public class Offer$$24 {
 
