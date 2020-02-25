@@ -1,5 +1,8 @@
 package com.example.tengfei.day05;
 
+import com.sun.org.glassfish.external.statistics.RangeStatistic;
+import javafx.scene.transform.Rotate;
+
 import java.lang.reflect.Modifier;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -76,6 +79,78 @@ public class BST<E extends Comparable<E>> {
 
     }
 
+    public Node removeMin(){
+        Node result = minimum(root);
+        root = removeMin(root);
+        return result;
+    }
+
+    private Node removeMin(Node root) {
+        if (root.left == null){
+            Node rightNode = root.right;
+            root.right = null;
+            size--;
+            return rightNode;
+        }
+
+        root.left = removeMin(root.left);
+        return root;
+    }
+
+
+
+
+    public Node removeMax(){
+        Node result = minimum(root);
+        root = removeMax(root);
+        return result;
+    }
+
+    private Node removeMax(Node root) {
+        if (root.right == null){
+            Node leftNode = root.left;
+            root.left = null;
+            size--;
+            return leftNode;
+        }
+
+        root.right = removeMin(root.right);
+        return root;
+    }
+
+    /**
+     * 寻找二分搜索树中的最小值
+     */
+    public E minimum() {
+        if (size == 0) {
+            throw new IllegalArgumentException("当前二分搜索树没有数据");
+        }
+        return minimum(root).e;
+    }
+
+    private Node minimum(Node root) {
+        if (root.left == null) return root;
+        return minimum(root.left);
+    }
+
+
+    /**
+     * 寻找二分搜索树中的最大值
+     */
+    public E maximum() {
+        if (size == 0) {
+            throw new IllegalArgumentException("当前二分搜索树没有数据");
+        }
+        return maximum(root).e;
+    }
+
+    private Node maximum(Node root) {
+        if (root.right == null) return root;
+        return minimum(root.right);
+    }
+
+
+
     /**
      * 二分搜索树的前序遍历
      */
@@ -111,20 +186,20 @@ public class BST<E extends Comparable<E>> {
      * 后序遍历
      */
     public void postOrder() {
-        inOrder(root);
+        postOrder(root);
     }
 
-    public void levelOrder(){
+    public void levelOrder() {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             Node node = queue.remove();
             System.out.println(node.e);
-            if (node.left!=null){
+            if (node.left != null) {
                 queue.add(node.left);
             }
 
-            if (node.right!=null){
+            if (node.right != null) {
                 queue.add(node.right);
             }
         }
