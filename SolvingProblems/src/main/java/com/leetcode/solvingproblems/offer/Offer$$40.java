@@ -1,6 +1,7 @@
 package com.leetcode.solvingproblems.offer;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 /**
  * @author by tengfei on 2020/3/2.
@@ -15,6 +16,7 @@ public class Offer$$40 {
         for (int i = 0; i < k; i++) {
             array[i] = arr[i];
         }
+
         return array;
     }
 
