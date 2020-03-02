@@ -12,7 +12,7 @@ package com.leetcode.solvingproblems.easy;
  */
 public class LeetCode$$203 {
 
-    static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
