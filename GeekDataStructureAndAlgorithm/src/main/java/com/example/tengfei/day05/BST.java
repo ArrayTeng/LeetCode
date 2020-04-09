@@ -11,6 +11,7 @@ import java.util.Queue;
  * @author by tengfei on 2020/2/21.
  * @description： 二分搜索树
  */
+@SuppressWarnings("Duplicates")
 public class BST<E extends Comparable<E>> {
 
     private class Node {
@@ -79,14 +80,14 @@ public class BST<E extends Comparable<E>> {
 
     }
 
-    public Node removeMin(){
+    public Node removeMin() {
         Node result = minimum(root);
         root = removeMin(root);
         return result;
     }
 
     private Node removeMin(Node root) {
-        if (root.left == null){
+        if (root.left == null) {
             Node rightNode = root.right;
             root.right = null;
             size--;
@@ -98,16 +99,14 @@ public class BST<E extends Comparable<E>> {
     }
 
 
-
-
-    public Node removeMax(){
+    public Node removeMax() {
         Node result = minimum(root);
         root = removeMax(root);
         return result;
     }
 
     private Node removeMax(Node root) {
-        if (root.right == null){
+        if (root.right == null) {
             Node leftNode = root.left;
             root.left = null;
             size--;
@@ -116,6 +115,41 @@ public class BST<E extends Comparable<E>> {
 
         root.right = removeMin(root.right);
         return root;
+    }
+
+    public Node remove(Node node, E e) {
+        if (node == null) return null;
+        if (e.compareTo(node.e) < 0) {
+            node.left = remove(node.left, e);
+            return node;
+        } else if (e.compareTo(node.e) > 0) {
+            node.right = remove(node.right, e);
+            return node;
+        } else {
+
+            if (root.left == null) {
+                Node rightNode = root.right;
+                root.right = null;
+                size--;
+                return rightNode;
+            }
+
+            if (root.right == null) {
+                Node leftNode = root.left;
+                root.left = null;
+                size--;
+                return leftNode;
+            }
+
+            Node successor = minimum(node.right);
+            successor.right = removeMin(node.right);
+            successor.left = node.left;
+
+            node.left = node.right = null;
+
+            return successor;
+
+        }
     }
 
     /**
@@ -148,7 +182,6 @@ public class BST<E extends Comparable<E>> {
         if (root.right == null) return root;
         return minimum(root.right);
     }
-
 
 
     /**
