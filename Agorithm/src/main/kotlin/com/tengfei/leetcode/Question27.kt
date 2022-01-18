@@ -1,3 +1,5 @@
+package com.tengfei.leetcode
+
 /**
  * 27. 移除元素
  */

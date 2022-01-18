@@ -1,5 +1,7 @@
+package com.tengfei.leetcode
+
 /**
- * https://leetcode-cn.com/problems/binary-search/
+ * https://leetcode-cn.com/problems/binary-com.tengfei.leetcode.search/
  * 704. 二分查找
  */
 fun main(args: Array<String>) {

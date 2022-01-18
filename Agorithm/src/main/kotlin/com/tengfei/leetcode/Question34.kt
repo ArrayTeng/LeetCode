@@ -1,3 +1,5 @@
+package com.tengfei.leetcode
+
 /**
  * https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
  */
