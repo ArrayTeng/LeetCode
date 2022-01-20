@@ -3,7 +3,6 @@ package com.tengfei.offer;
 import com.tengfei.util.ListNode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
